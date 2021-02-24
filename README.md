@@ -1,7 +1,7 @@
 # VBA Progress Bar
 This is an easy to use VBA userform for visualizing macro progress.
 
-![VBA Progress Bar Demo](assets\progressbar_demo.gif)
+![VBA Progress Bar Demo](assets/progressbar_demo.gif)
 
 ## Installation
 1. Download source files from \src directory (`frmProgressbar.frm` and `.frx`) and save in the same local directory
