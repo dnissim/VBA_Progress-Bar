@@ -30,12 +30,14 @@ Arguments:
 - `strLowerText`: *Optional* string for the lower caption
 
 #### Recaption
-This method only updates the captions, but does not affect the progress bar.
-If no argument is provided the caption will remain unchanged.  Provide a null string if you want the caption to be blank.
+This method only updates the captions, but does not affect the progress bar itself.
+
 
 Arguments:
 - `strUpperText`: *Optional* string for the upper caption
 - `strLowerText`: *Optional* string for the lower caption
+
+If no argument is provided the caption will remain unchanged.  Provide a null string if you want the caption to be blank.
 
 #### SetBarColor
 This method changes the color of the progress bar.
@@ -43,6 +45,10 @@ This method changes the color of the progress bar.
 
 The method can accept colors as hex codes in the format [`&H00000000&`](https://www.thespreadsheetguru.com/the-code-vault/hex-color-codes-for-vba-userforms) or from the [RGB(255,255,255) function](https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/rgb-function).
 
+Arguments:
+- `barColor` - *Optional* Value representing desired progress bar color.
+
+If the method is used and no `barColor` value is provided, the progress bar will default back to light green.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
