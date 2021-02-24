@@ -54,4 +54,4 @@ If the method is used and no `barColor` value is provided, the progress bar will
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](LICENSE)
