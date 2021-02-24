@@ -19,7 +19,7 @@ Option Explicit
 
 Private Sub UserForm_Activate()
 
-Me.Caption = "Updating " & ThisWorkbook.Name
+   Me.Caption = "Updating " & ThisWorkbook.Name
 
 End Sub
 
@@ -27,12 +27,12 @@ Public Sub Recaption( _
            Optional strUpperText As String = "*No Update*", _
            Optional strLowerText As String = "*No Update*")
 
-'Changes userform captions without updating progressbar
-    
-'Don't change captions if nothing was provided.  If a nullstring is provided the caption will go to nullstring
-If strUpperText <> "*No Update*" Then txtUpper.Caption = strUpperText
-If strLowerText <> "*No Update*" Then txtLower.Caption = strLowerText
-Repaint
+   'Changes userform captions without updating progressbar
+      
+   'Don't change captions if nothing was provided.  If a nullstring is provided the caption will go to nullstring
+   If strUpperText <> "*No Update*" Then txtUpper.Caption = strUpperText
+   If strLowerText <> "*No Update*" Then txtLower.Caption = strLowerText
+   Repaint
            
 End Sub
 
@@ -41,27 +41,27 @@ Public Sub Progress(ByVal currentItem As Integer, _
            Optional strUpperText As String = "*No Update*", _
            Optional strLowerText As String = "*No Update*")
            
-' Updates the progress bar length and % Complete caption
-Dim percentComplete As Single
+   ' Updates the progress bar length and % Complete caption
+   Dim percentComplete As Single
 
-percentComplete = currentItem / totalItems * 100
-percentComplete = Format(percentComplete, "0")
+   percentComplete = currentItem / totalItems * 100
+   percentComplete = Format(percentComplete, "0")
 
-'Update progress bar visuals
-txtBar.Caption = percentComplete & "% Complete"
+   'Update progress bar visuals
+   txtBar.Caption = percentComplete & "% Complete"
 
-Recaption strUpperText, strLowerText
+   Recaption strUpperText, strLowerText
 
-Bar.Width = percentComplete * 2
-Repaint
+   Bar.Width = percentComplete * 2
+   Repaint
 
-DoEvents
+   DoEvents
 End Sub
 
-Public Sub SetBarColor(Optional barColor As Long = &HB917&)
-'Change the bar color.  Accepts inputs from the RGB function
-'Default is green
+Public Sub SetBarColor(Optional ByVal barColor As Long = &HB917&)
+   'Change the bar color.  Accepts inputs from the RGB function
+   'Default is green
 
-frmProgressBar.Bar.BackColor = barColor
-frmProgressBar.Repaint
+   frmProgressBar.Bar.BackColor = barColor
+   frmProgressBar.Repaint
 End Sub
